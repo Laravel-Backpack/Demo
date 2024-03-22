@@ -16,11 +16,10 @@ class Uploader extends Model
     protected $fillable = ['image', 'upload', 'upload_required', 'upload_multiple', 'upload_multiple_required', 'dropzone', 'dropzone_required', 'easymde', 'gallery'];
 
     protected $casts = [
-        'gallery' => 'json',
-        'upload_multiple' => 'array',
+        'gallery'                  => 'json',
+        'upload_multiple'          => 'array',
         'upload_multiple_required' => 'array',
-        'dropzone' => 'array',
-        'dropzone_required' => 'array',
+        'dropzone'                 => 'array',
+        'dropzone_required'        => 'array',
     ];
-
 }

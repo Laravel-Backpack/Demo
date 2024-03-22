@@ -38,7 +38,7 @@ class UploaderCrudController extends CrudController
         CRUD::field('dropzone')->type('dropzone')->withFiles();
         CRUD::field('dropzone_required')->type('dropzone')->withFiles();
         CRUD::field('easymde')->type('easymde')->withFiles();
-        
+
         CRUD::field('gallery')->type('repeatable')->subfields([
             [
                 'name' => 'title',
@@ -60,27 +60,27 @@ class UploaderCrudController extends CrudController
                 ],
             ],
             [
-                'name' => 'image',
-                'type' => 'image',
+                'name'    => 'image',
+                'type'    => 'image',
                 'wrapper' => [
-                    'class' => 'form-group form-control col-md-7 col-xs-12'
+                    'class' => 'form-group form-control col-md-7 col-xs-12',
                 ],
                 'withFiles' => true,
             ],
             [
-                'name' => 'dropzone',
-                'type' => 'dropzone',
+                'name'      => 'dropzone',
+                'type'      => 'dropzone',
                 'withFiles' => true,
-                'wrapper' => [
-                    'class' => 'form-group form-control col-md-7 col-xs-12'
+                'wrapper'   => [
+                    'class' => 'form-group form-control col-md-7 col-xs-12',
                 ],
             ],
             [
-                'name' => 'easymde',
-                'type' => 'easymde',
+                'name'      => 'easymde',
+                'type'      => 'easymde',
                 'withFiles' => true,
-                'wrapper' => [
-                    'class' => 'form-group form-control col-md-7 col-xs-12'
+                'wrapper'   => [
+                    'class' => 'form-group form-control col-md-7 col-xs-12',
                 ],
             ],
         ]);
