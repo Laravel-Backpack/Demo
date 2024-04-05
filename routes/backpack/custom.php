@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\UploaderCrudController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +27,8 @@ Route::group([
     Route::crud('hero', 'HeroCrudController');
     Route::crud('story', 'StoryCrudController');
     Route::crud('cave', 'CaveCrudController');
+
+    Route::crud('uploaders', UploaderCrudController::class);
 
     // ----------------
     // Other entities

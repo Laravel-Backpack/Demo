@@ -30,14 +30,16 @@ class UploaderCrudController extends CrudController
     {
         CRUD::setValidation(UploaderRequest::class);
 
-        CRUD::field('image')->type('image');
+        CRUD::field('image')->type('image')->withFiles();
         CRUD::field('upload')->type('upload')->withFiles();
         CRUD::field('upload_required')->type('upload')->withFiles();
         CRUD::field('upload_multiple')->type('upload_multiple')->withFiles();
         CRUD::field('upload_multiple_required')->type('upload_multiple')->withFiles();
         CRUD::field('dropzone')->type('dropzone')->withFiles();
         CRUD::field('dropzone_required')->type('dropzone')->withFiles();
-        CRUD::field('easymde')->type('easymde')->withFiles();
+        CRUD::field('easymde')->type('easymde')->withFiles([
+            'path' => 'test/easymde',
+        ]);
 
         CRUD::field('gallery')->type('repeatable')->subfields([
             [
