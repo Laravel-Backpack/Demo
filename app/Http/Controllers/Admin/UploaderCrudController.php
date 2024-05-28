@@ -18,7 +18,7 @@ class UploaderCrudController extends CrudController
     public function setup()
     {
         CRUD::setModel(\App\Models\Uploader::class);
-        CRUD::setRoute(config('backpack.base.route_prefix').'/uploader');
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/uploader');
         CRUD::setEntityNameStrings('uploader', 'uploaders');
     }
 
@@ -89,6 +89,11 @@ class UploaderCrudController extends CrudController
     }
 
     protected function setupUpdateOperation()
+    {
+        $this->setupCreateOperation();
+    }
+
+    protected function setupDeleteOperation()
     {
         $this->setupCreateOperation();
     }
