@@ -17,6 +17,7 @@ class CreateOwnerPetTable extends Migration
             $table->foreignId('owner_id');
             $table->foreignId('pet_id');
             $table->string('role');
+            $table->integer('order')->nullable();
         });
     }
 

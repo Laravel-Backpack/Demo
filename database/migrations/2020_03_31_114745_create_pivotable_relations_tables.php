@@ -45,6 +45,7 @@ class CreatePivotableRelationsTables extends Migration
             $table->integer('monster_id')->unsigned();
             $table->integer('product_id')->unsigned();
             $table->string('notes');
+            $table->integer('order')->nullable();
             $table->nullableTimestamps();
         });
 

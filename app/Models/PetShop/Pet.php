@@ -33,7 +33,7 @@ class Pet extends Model
 
     public function owners()
     {
-        return $this->belongsToMany(\App\Models\PetShop\Owner::class)->withPivot('role');
+        return $this->belongsToMany(\App\Models\PetShop\Owner::class)->withPivot(['role', 'order']);
     }
 
     public function skills()
