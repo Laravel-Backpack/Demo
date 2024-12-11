@@ -161,7 +161,7 @@ class Monster extends Model
 
     public function dummyproducts()
     {
-        return $this->belongsToMany(\App\Models\Product::class, 'monster_productdummy')->withPivot(['notes','order']);
+        return $this->belongsToMany(\App\Models\Product::class, 'monster_productdummy')->withPivot(['notes', 'order']);
     }
 
     public function countries()
