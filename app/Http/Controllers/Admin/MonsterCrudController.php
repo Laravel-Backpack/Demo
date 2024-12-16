@@ -1216,8 +1216,7 @@ class MonsterCrudController extends CrudController
                         ],
                     ],
                 ],
-                'tab'         => 'Relationship',
-                'orderColumn' => 'order',
+                'tab'   => 'Relationship',
             ],
 
             // -------------------------
